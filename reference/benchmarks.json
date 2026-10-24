@@ -1,0 +1,80 @@
+{
+  "model_name": "PanGuide3D",
+  "description": "nnU-Net-style 3D U-Net with a shared encoder, a pancreas decoder producing a probabilistic pancreas map, a tumor decoder conditioned on that map at multiple scales, and a lightweight Transformer bottleneck.",
+  "paper": {
+    "title": "PanGuide3D: Cohort-Robust Pancreas Tumor Segmentation via Probabilistic Pancreas Conditioning and a Transformer Bottleneck",
+    "authors": [
+      "Sunny Joy Ma",
+      "Xiang Ma"
+    ],
+    "arxiv_id": "2604.20981",
+    "url": "https://arxiv.org/abs/2604.20981",
+    "submitted": "2026-04-22"
+  },
+  "trained_on": "PanTS training split (7,200 train / 1,800 validation of 9,000 cases)",
+  "evaluation": {
+    "protocol": "five-fold cross-validation; each fold's checkpoint evaluated on both test sets",
+    "reported_as": "mean +/- SD across folds",
+    "spacing_mm": 1.5,
+    "voxel_volume_mm3": 3.375,
+    "patch_xyz": [
+      160,
+      160,
+      96
+    ],
+    "test_sets": {
+      "pants": "PanTS official test set, 901 cases, 151 tumor-positive (in-cohort)",
+      "msd": "MSD Task07 Pancreas, 57 cases, all tumor-positive (out-of-cohort)"
+    }
+  },
+  "results": {
+    "pants": {
+      "tumor_dice": 0.46,
+      "tumor_dice_sd": 0.041,
+      "pancreas_dice": 0.804,
+      "pancreas_dice_sd": 0.013,
+      "false_positive_volume_cm3": 3.07,
+      "false_positive_volume_cm3_sd": 1.554,
+      "tumor_sensitivity": 0.787,
+      "tumor_sensitivity_sd": 0.073,
+      "patient_sensitivity": 0.819,
+      "patient_sensitivity_sd": 0.039
+    },
+    "msd": {
+      "tumor_dice": 0.475,
+      "tumor_dice_sd": 0.069,
+      "pancreas_dice": 0.753,
+      "pancreas_dice_sd": 0.033,
+      "false_positive_volume_cm3": 2.004,
+      "false_positive_volume_cm3_sd": 1.765,
+      "tumor_sensitivity": 0.842,
+      "tumor_sensitivity_sd": 0.088,
+      "patient_sensitivity": 0.842,
+      "patient_sensitivity_sd": 0.088
+    }
+  },
+  "primary_test_set": "pants",
+  "overall": {
+    "tumor_dice": 0.46,
+    "tumor_dice_sd": 0.041,
+    "pancreas_dice": 0.804,
+    "pancreas_dice_sd": 0.013,
+    "false_positive_volume_cm3": 3.07,
+    "false_positive_volume_cm3_sd": 1.554,
+    "tumor_sensitivity": 0.787,
+    "tumor_sensitivity_sd": 0.073,
+    "patient_sensitivity": 0.819,
+    "patient_sensitivity_sd": 0.039
+  },
+  "ablations_and_baselines": {
+    "2Decoder": "two decoders, no Transformer bottleneck",
+    "TransBNeck": "Transformer bottleneck, single decoder, no pancreas conditioning",
+    "baselines": [
+      "nnU-Net",
+      "SwinUNETR",
+      "RADFM"
+    ]
+  },
+  "subgroups_note": "The paper analyses tumor Dice and sensitivity by tumor size and pancreatic subregion (Figure 7), but reports those only as a heatmap; no numeric values are tabulated, so none are recorded here.",
+  "source": "arXiv:2604.20981, Table 2"
+}

@@ -1,0 +1,33 @@
+{
+  "case": "MSD_pancreas_045",
+  "device": "mps",
+  "inference_seconds": 109.837,
+  "gpu_peak_bytes": null,
+  "process_peak_rss_bytes": 845774848,
+  "input_shape": [
+    512,
+    512,
+    41
+  ],
+  "model_shape": [
+    137,
+    279,
+    279
+  ],
+  "output_shape": [
+    41,
+    512,
+    512
+  ],
+  "tumor_voxels": 2470,
+  "pancreas_voxels": 23842,
+  "checkpoint_sha256": "917acfa357740361e8d25bbe4287c4e861e67d685ad95ff745b82a41f154a1b0",
+  "tumor_confidence_means": [
+    0.9184445824071713,
+    0.829070961423989
+  ],
+  "tumor_confidence_voxels": [
+    2296,
+    174
+  ]
+}

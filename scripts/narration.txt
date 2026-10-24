@@ -1,0 +1,13 @@
+PanGuide 3D is an educational research application for exploring experimental pancreas and candidate tumor segmentations in three-dimensional CT. It makes the model's spatial output easier to inspect. It is not a diagnostic system.
+
+A CT scan is a volume with physical spacing and orientation. We use an openly licensed research example from the Medical Segmentation Decathlon. The application validates the volume and applies the preprocessing specified by the supplied model. Only de-identified research scans belong in this demonstration.
+
+These are cached outputs from a completed run of the actual trained checkpoint. Caching makes the demonstration independent of a cloud GPU queue. The results are labeled as previously computed. Live Inference runs the same trained model on a newly supplied scan, when compatible hardware is available. We do not claim that a new analysis is running in this recording.
+
+The green overlay marks predicted pancreas. Orange marks a candidate tumor region when the model predicts one. The three planes show the same physical volume. We can inspect adjacent slices and change contrast and overlay opacity. Crosshairs identify the selected intersection, and direction labels help us stay oriented. These overlays are actual network outputs. They are not hand-drawn lesions or reference annotations substituted for predictions.
+
+Surfaces reconstructed from the segmentation masks preserve physical proportions. Rotation helps us inspect the spatial relationship between the predicted regions. We can zoom in, hide a surface, and restore the starting camera. A visually convincing surface does not prove that the segmentation is correct. Both false positives and missed lesions remain possible.
+
+The educational report is generated directly from the masks. It reports segmented volumes, connected regions, and geometric intersection. These are model-output statistics, not validated clinical measurements or evidence of malignancy. A PDF export includes selected CT views, the model identity, and the educational-use limitations.
+
+The contribution is an inspectable workflow from CT to experimental segmentation and visualization. The model does not classify cancer, predict stage, recommend treatment, or determine prognosis. A negative segmentation does not rule out cancer. Future work includes independent validation, clearer preprocessing provenance, and testing the public cloud deployment. PanGuide 3D is for research and education, with professional interpretation required.

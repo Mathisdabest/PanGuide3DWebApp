@@ -1,0 +1,34 @@
+# Local environments, tools, secrets and temporary uploads
+.venv/
+venv/
+.browsers/
+.runtime-cache/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+.DS_Store
+recordings/
+space-package/
+out/
+*.bundle
+
+# Checkpoint is fetched separately and hash-verified (209 MB).
+checkpoints/*.pt
+checkpoints/*.pth
+*.ckpt
+
+# Only the explicitly attributed public example may be committed.
+samples/
+*.nii
+*.nii.gz
+*.npz
+*.dcm
+*.dicom
+*.mha
+*.mhd
+*.nrrd
+!public-samples/MSD_pancreas_045/ct.nii.gz
+!demo-cache/MSD_*.npz
