@@ -12,4 +12,4 @@ The model checkpoint is not included in Git. The download helper retrieves the s
 
 The MSD Task07 research CT, cached CT/segmentation results, CT screenshots, sample reports and CT-containing demonstration video carry CC BY-SA 4.0 terms. The original dataset contributors include Memorial Sloan Kettering Cancer Center through the Medical Segmentation Decathlon. Full attribution, source, publication and adaptation details are in public-samples/ATTRIBUTION.md. The MIT code license does not supersede those data/asset terms.
 
-The source project also included PanTS files under different restrictions. No PanTS scans, cached outputs, renders or original Git history are included here. Historical documentation may refer to those local-only files.
+Four unmodified PanTS CT examples are included under CC BY-NC-ND 4.0, copyright The Johns Hopkins University. See samples/README.md and samples/LICENSE-PanTS for attribution and terms. PanTS processed arrays, cached outputs, renders and original Git history are excluded.

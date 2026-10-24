@@ -9,4 +9,4 @@ Download mirror: https://huggingface.co/datasets/MedOtter/msd-pancreas at revisi
 
 The NIfTI is downloaded as provided by the mirror. Cached outputs, overlays, and CT-derived demo assets are adaptations for educational visualization and are supplied under CC BY-SA 4.0. Segmentation masks are predictions from the supplied PanGuide3D checkpoint, not reference annotations. Display uses a lossless LPS axis permutation/flip; inference uses the bundled preprocessing recipe. This is a selected demonstration case, not a performance estimate. The original project identifies this as a held-out fold-0 case; the actual training split file was not supplied, so held-out status has not been independently verified.
 
-The MIT code license applies separately. No endorsement by the dataset contributors is implied. Local PanTS assets in samples/ are excluded from public packaging.
+The MIT code license applies separately. No endorsement by the dataset contributors is implied. The separate PanTS examples and their terms are documented in samples/README.md.

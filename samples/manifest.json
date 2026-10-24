@@ -1,0 +1,26 @@
+[
+  {
+    "case": "PanTS_00009473",
+    "path": "samples/PanTS_00009473/input/ct.nii.gz",
+    "bytes": 22009149,
+    "sha256": "a4150f9f5fa6187f8bb118f8fb81d57e7f4cffc02ae6642698628cfd9a93f291"
+  },
+  {
+    "case": "PanTS_00009005",
+    "path": "samples/PanTS_00009005/input/ct.nii.gz",
+    "bytes": 14664845,
+    "sha256": "41b388701cf8095484677101723285155c8889a3d491726c67429954df04100e"
+  },
+  {
+    "case": "PanTS_00009001",
+    "path": "samples/PanTS_00009001/input/ct.nii.gz",
+    "bytes": 15673163,
+    "sha256": "c9d3ab5241c9218cc31d7730d854260992594ac57d4c795a87dafd85a2c940d7"
+  },
+  {
+    "case": "PanTS_00009160",
+    "path": "samples/PanTS_00009160/input/ct.nii.gz",
+    "bytes": 43506791,
+    "sha256": "ac07df52d9c8dec1ff5fdc08b0b9116c3ed4c874f9f61a9ae0b72d7101bea395"
+  }
+]

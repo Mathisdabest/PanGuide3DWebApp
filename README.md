@@ -47,7 +47,7 @@ The redistributable example is [MSD Task07 pancreas_045](public-samples/MSD_panc
 python scripts/build_demo_cache.py MSD_pancreas_045
 ```
 
-Original PanTS scans, their derived assets and the original bundle's Git history are excluded from this repository.
+Four unmodified PanTS scans are included under a separate dataset license (see samples/README.md). PanTS derived assets and the original bundle's Git history are excluded.
 
 ## Tests and documentation
 
@@ -77,3 +77,7 @@ Upload only de-identified research scans. Application files and session state ar
 The destination repository's [MIT license](LICENSE) is preserved. The original PanGuide3D code's MIT copyright notice is retained in [LICENSE-PanGuide3D](LICENSE-PanGuide3D). The MSD CT example and CT-derived demonstration assets are under **CC BY-SA 4.0**, separately from the code; see [attribution](public-samples/ATTRIBUTION.md) and [third-party notices](THIRD_PARTY_NOTICES.md). The checkpoint is provided separately with the source project's model provenance and dataset terms.
 
 The app was developed with substantial assistance from OpenAI Codex for implementation, debugging, tests, deployment and documentation. Existing model code and the trained checkpoint originated in the supplied PanGuide3D research project.
+
+## Additional PanTS examples
+
+Four original PanTS CT examples are included in [samples](samples/README.md) for noncommercial research and educational use under CC BY-NC-ND 4.0. Their dataset license is separate from the MIT code license; processed PanTS arrays and overlays are excluded.
